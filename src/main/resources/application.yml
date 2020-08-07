@@ -1,0 +1,44 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+#linux-redis配置
+shiro-redis:
+  enabled: true
+  redis-manager:
+   host: 192.168.66.128:6379
+#  redis:
+    ##    database: 0
+    ##    host: 192.168.66.128
+    ##    port: 6379
+    ##    #      jedis:
+    ##    #        pool:
+    ##    #          max-active: 8
+    ##    #          max-wait: -1
+    ##    #          max-idle: 8
+  ##    #          min-idle: 0
+  ##    timeout: 5000
+
+#启动端口
+server:
+  port: 8080
+
+#jwt配置
+csii:
+  jwt:
+    #密钥 自定义
+    secret: df5f45s4fsdsddsf4781f32d1fs
+    #token 有效时长  7天 单位 秒
+    expire: 604800
+    header: Authorization
+
+
+
+
+
